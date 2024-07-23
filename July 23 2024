@@ -1,0 +1,252 @@
+IF (
+    (
+        
+        (CONTAINS(UPPER([Targeted_Provider]), UPPER('optimum'))
+         AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+         AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+         AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+         AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('overlap'))
+         AND CONTAINS(UPPER([Eligible_Provider]), UPPER('optimum'))
+         AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('cox'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+
+OR 
+        
+        (CONTAINS(UPPER([Targeted_Provider]), UPPER('cox'))
+         AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+         AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+         AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+         AND CONTAINS(UPPER([Eligible_Provider]), UPPER('cox'))
+         AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('optimum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Targeted_Provider]), UPPER('frontier'))
+            AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('frontier'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('frontier'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Targeted_Provider]), UPPER('spectrum'))
+            AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('spectrum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('spectrum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Targeted_Provider]), UPPER('xfinity'))
+            AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('xfinity'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('xfinity'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+
+        OR 
+        
+        (
+            CONTAINS(UPPER([Targeted_Provider]), UPPER('fidium'))
+            AND CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('fidium'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+        OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('organic'))
+            AND CONTAINS(UPPER([Primary Eligible Provider]), UPPER('fidium'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+ OR
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('nationwide'))
+            AND (CONTAINS(UPPER([Eligible_Provider]), UPPER('fidium')) OR CONTAINS(UPPER([Eligible_Provider]), UPPER('frontier')) OR CONTAINS(UPPER([Eligible_Provider]), UPPER('spectrum')) OR CONTAINS(UPPER([Eligible_Provider]), UPPER('optimum')))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+
+ OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Targeted_Provider]), UPPER('optimum'))
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('messenger'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('optimum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+        
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('nationwide'))
+            AND CONTAINS(UPPER([Targeted_Provider]), UPPER('optimum'))
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('optimum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('cell'))
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('optimum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('nationwide'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('overlap'))
+            AND NOT CONTAINS(UPPER([Lead Reference]), UPPER('cell'))
+            AND CONTAINS(UPPER([Targeted_Provider]), UPPER('spectrum'))
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('spectrum'))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) OR ISNULL([Existing_Customer]))
+        )
+
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('overlap')) 
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND NOT (CONTAINS(UPPER([Eligible_Provider]), UPPER('|')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('hughesnet')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('viasat')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('xfinity'))OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('unknown')))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')))
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('overlap')) 
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('|'))
+            AND ((CONTAINS(UPPER([Existing_Customer]), UPPER('false')) OR CONTAINS(UPPER([Existing_Customer]), UPPER('null')))
+            AND NOT CONTAINS(UPPER([Provider Count ]), UPPER('0'))
+                OR CONTAINS(UPPER([Existing_Customer]), UPPER('true')) 
+                    AND (CONTAINS(UPPER([Provider Count ]), UPPER('2')) OR CONTAINS(UPPER([Provider Count ]), UPPER('3')) OR CONTAINS(UPPER([Provider Count ]), UPPER('4'))))
+)
+   
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('overlap')) 
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND NOT (CONTAINS(UPPER([Eligible_Provider]), UPPER('|')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('hughesnet')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('viasat')) OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('xfinity'))OR CONTAINS(UPPER([Primary Eligible Provider]), UPPER('unknown')))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')))
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectus'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('google'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('overlap')) 
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND CONTAINS(UPPER([Eligible_Provider]), UPPER('|'))
+            AND ((CONTAINS(UPPER([Existing_Customer]), UPPER('false')) OR CONTAINS(UPPER([Existing_Customer]), UPPER('null')))
+            AND NOT CONTAINS(UPPER([Provider Count ]), UPPER('0'))
+                OR CONTAINS(UPPER([Existing_Customer]), UPPER('true')) 
+                    AND (CONTAINS(UPPER([Provider Count ]), UPPER('2')) OR CONTAINS(UPPER([Provider Count ]), UPPER('3')) OR CONTAINS(UPPER([Provider Count ]), UPPER('4'))))
+
+OR 
+        
+        (
+            CONTAINS(UPPER([Source Reference]), UPPER('freeconnectacp'))
+            AND CONTAINS(UPPER([Advertising_Platform]), UPPER('facebook'))
+            AND CONTAINS(UPPER([Lead Reference]), UPPER('multiP3NonAcp'))
+            AND (CONTAINS(UPPER([Targeted_Provider]), UPPER('fidium'))
+                AND CONTAINS(UPPER([Targeted_Provider]), UPPER('windstream'))
+                AND CONTAINS(UPPER([Targeted_Provider]), UPPER('wow'))
+                AND CONTAINS(UPPER([Targeted_Provider]), UPPER('ziply'))
+                AND CONTAINS(UPPER([Targeted_Provider]), UPPER('metronet'))))
+            AND CONTAINS(UPPER([Campaign_Type]), UPPER('leadgen'))
+            AND (CONTAINS(UPPER([Eligible_Provider]), UPPER('fidium'))
+                OR CONTAINS(UPPER([Eligible_Provider]), UPPER('windstream'))
+                OR CONTAINS(UPPER([Eligible_Provider]), UPPER('wow'))
+                OR CONTAINS(UPPER([Eligible_Provider]), UPPER('ziply'))
+                OR CONTAINS(UPPER([Eligible_Provider]), UPPER('metronet'))))
+            AND (NOT CONTAINS(UPPER([Existing_Customer]), UPPER('True')) 
+        
+                    ) 
+                )
+            )
+        )
+    )
+)
+THEN 1
+ELSE 0
+END
